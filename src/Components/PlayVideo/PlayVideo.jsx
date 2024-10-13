@@ -72,7 +72,7 @@ const PlayVideo = () => {
         <p>Subscribe this Channel to Watch More videos</p>
         <hr />
         <h4>{apiData?value_converter(apiData.statistics.commentCount):102} comments</h4>
-        {commentData.map((item,index)=>{
+        {commentData && commentData.map((item,index)=>{
             return(
             <div key={index} className="comment">
                 <img src={item.snippet.topLevelComment.snippet.authorProfileImageUrl} alt="" />
